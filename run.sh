@@ -171,7 +171,8 @@ function modernising_setup() {
   echo "Running modernising workshop setup..."
   ( cd workshops/modernising &&
     git checkout master &&
-    git pull origin master
+    git pull origin master &&
+    sudo ln -sf /var/www/summercamp/workshops/modelling/installation/vhost /etc/apache2/sites-enabled/modelling.conf
   )
 }
 
